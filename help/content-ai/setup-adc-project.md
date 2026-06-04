@@ -47,7 +47,7 @@ Los servicios de inteligencia artificial aplicada al contenido de AEM admiten do
 
    >[!NOTE]
    >
-   >Si la tarjeta API está deshabilitada con el mensaje &quot;Se requiere licencia&quot;, es posible que el entorno de AEM as a Cloud Service no se actualice. Consulte [Modernización del entorno de AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup#modernization-of-aem-as-a-cloud-service-environment).
+   >Si la tarjeta API está deshabilitada con el mensaje &quot;Se requiere licencia&quot;, es posible que el entorno de AEM as a Cloud Service no se actualice. Consulte [Modernización del entorno de AEM as a Cloud Service](https://experienceleague.adobe.com/es/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup#modernization-of-aem-as-a-cloud-service-environment).
 
 1. En el cuadro de diálogo **[!UICONTROL Configurar API]**, seleccione la autenticación de **[!UICONTROL servidor a servidor]**.
 
