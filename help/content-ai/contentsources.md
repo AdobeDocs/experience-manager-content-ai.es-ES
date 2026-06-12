@@ -23,7 +23,7 @@ Esta guía le explica cómo configurar las fuentes de inteligencia artificial ap
 Antes de empezar, asegúrese de que se cumplen las siguientes condiciones:
 
 * Tiene un programa de Cloud Manager activo con al menos un entorno de AEM as a Cloud Service.
-* Usted tiene el rol de **[Administrador del sistema](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** en Admin Console para el programa.
+* Usted tiene el rol de **[Administrador del sistema](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** en Admin Console para el programa.
 * El perfil de producto de entorno se ha aprovisionado en **Adobe Admin Console**, consulte [Configurar un proyecto de Adobe Developer Console](setup-adc-project.md).
 
 ## Paso 1: Abrir la pestaña Configuración de inteligencia artificial aplicada al contenido {#open-tab}
