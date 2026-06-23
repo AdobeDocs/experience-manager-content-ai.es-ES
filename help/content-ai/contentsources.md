@@ -6,9 +6,9 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM Content AI, Fuentes de inteligencia artificial aplicada al contenido, Adquisición, Cloud Manager, Adobe Developer Console
-source-git-commit: 86c0b8b910583701dc4bd42b61e082cc5429cee8
+source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '1225'
 ht-degree: 1%
 
 ---
@@ -23,8 +23,42 @@ Esta guía le explica cómo configurar las fuentes de inteligencia artificial ap
 Antes de empezar, asegúrese de que se cumplen las siguientes condiciones:
 
 * Tiene un programa de Cloud Manager activo con al menos un entorno de AEM as a Cloud Service.
-* Usted tiene el rol de **[Administrador del sistema](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** en Admin Console para el programa.
-* El perfil de producto de entorno se ha aprovisionado en **Adobe Admin Console**, consulte [Configurar un proyecto de Adobe Developer Console](setup-adc-project.md).
+* El usuario está asignado al perfil de producto **Usuarios de AEM** para el entorno de destino, lo cual le permite ver las fuentes de contenido.
+* El usuario está asignado al perfil de producto **Administradores de AEM** para el entorno de destino, lo cual le permite crear y editar orígenes de contenido. El acceso a Cloud Manager por sí solo no es suficiente. Consulte [Asignar un usuario a un perfil de producto de AEM](#assign-product-profile) a continuación.
+* El perfil de producto de entorno se ha aprovisionado en **Adobe Admin Console**.
+
+## Asignar un usuario a un perfil de producto de AEM {#assign-product-profile}
+
+Utilice este procedimiento para otorgar acceso a un usuario a [!DNL Adobe Experience Manager] as a Cloud Service para un entorno específico. Asigne el perfil que coincida con el acceso que necesita el usuario:
+
+* **[!UICONTROL Usuarios de AEM]**: vean fuentes de contenido.
+* **[!UICONTROL Administradores de AEM]**: cree y edite orígenes de contenido.
+
+>[!NOTE]
+>
+>Los usuarios deben pertenecer a un perfil de producto de AEM como **[!UICONTROL Usuarios de AEM]** o **[!UICONTROL Administradores de AEM]** para acceder a AEM. El acceso a Cloud Manager por sí solo no es suficiente.
+
+Para asignar estos perfiles, debe ser administrador del sistema con el perfil de producto de Cloud Manager [!UICONTROL Propietario del negocio]. Tenga preparados el nombre y la dirección de correo electrónico del usuario.
+
+1. En [Cloud Manager](https://my.cloudmanager.adobe.com/), vaya a su programa y seleccione **[!UICONTROL Administrar acceso]** para el entorno de destino. Se abre una nueva pestaña [!DNL Adobe Admin Console] para ese entorno.
+1. Seleccione el perfil de producto **[!UICONTROL Usuarios de AEM]** o **[!UICONTROL Administradores de AEM]** para el nivel **publicar**; por ejemplo, `AEM Administrators - publish - Program 12345 - Environment 67890`. La inteligencia artificial aplicada al contenido publica contenido, por lo que el perfil debe asignarse al nivel de publicación, no al de autor.
+1. Seleccione **[!UICONTROL Agregar usuario]**.
+1. Introduzca el nombre y la dirección de correo electrónico del usuario y, a continuación, guarde el cambio. El usuario se agrega al perfil del producto.
+
+Repita estos pasos para cada entorno donde el usuario necesite acceso, como desarrollo, ensayo o producción.
+
+>[!CAUTION]
+>
+>No edite ni elimine los perfiles de producto predeterminados llamados **[!UICONTROL Administradores de AEM]** o **[!UICONTROL Usuarios de AEM]**. Al cambiar el nombre de **[!UICONTROL Administradores de AEM]** se eliminarán los derechos de administrador de todos los que tengan asignados.
+
+### Comprobar la asignación {#verify-assignment}
+
+Para comprobar que la asignación se ha realizado correctamente:
+
+1. En [!DNL Admin Console], vuelva a abrir el perfil de producto que asignó.
+1. Confirme que el usuario aparece en la lista de miembros.
+
+Si está solucionando problemas de acceso o de token, confirme que el usuario se agrega directamente al perfil del producto y no solo a través de un grupo.
 
 ## Paso 1: Abrir la pestaña Configuración de inteligencia artificial aplicada al contenido {#open-tab}
 

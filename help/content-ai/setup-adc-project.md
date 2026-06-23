@@ -6,9 +6,9 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM Content AI, Adobe Developer Console, autenticación, servidor a servidor, clave de API, token de acceso
-source-git-commit: 445aeafe64eb8a68d0770c1f1afb54d68e0b054f
+source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '714'
 ht-degree: 2%
 
 ---
@@ -27,6 +27,7 @@ Antes de empezar, asegúrese de lo siguiente:
 * Tiene acceso a [Adobe Developer Console](https://developer.adobe.com/console/) para su organización.
 * Se le ha agregado como **Desarrollador** en el perfil de producto de los servicios de inteligencia artificial aplicada al contenido de AEM en **Adobe Admin Console**. Sin esta función, la tarjeta de API **[!UICONTROL AEM Content AI Services]** aparece deshabilitada y la opción de autenticación **[!UICONTROL Servidor a servidor]** está oculta.
 * Conoce los números de programa y entorno del perfil de producto que desea seleccionar (por ejemplo, `AEM User - publish - Program 12345 - Environment 67890`).
+* Usted tiene el rol de **[Administrador del sistema](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** en Admin Console para el programa. Esta función le permite administrar perfiles de producto y asignar usuarios al entorno.
 
 ## Elegir un método de autenticación {#choose-auth}
 
@@ -47,7 +48,7 @@ Los servicios de inteligencia artificial aplicada al contenido de AEM admiten do
 
    >[!NOTE]
    >
-   >Si la tarjeta API está deshabilitada con el mensaje &quot;Se requiere licencia&quot;, es posible que el entorno de AEM as a Cloud Service no se actualice. Consulte [Modernización del entorno de AEM as a Cloud Service](https://experienceleague.adobe.com/es/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup#modernization-of-aem-as-a-cloud-service-environment).
+   >Si la tarjeta API está deshabilitada con el mensaje &quot;Se requiere licencia&quot;, es posible que el entorno de AEM as a Cloud Service no se actualice. Consulte [Modernización del entorno de AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup#modernization-of-aem-as-a-cloud-service-environment).
 
 1. En el cuadro de diálogo **[!UICONTROL Configurar API]**, seleccione la autenticación de **[!UICONTROL servidor a servidor]**.
 
