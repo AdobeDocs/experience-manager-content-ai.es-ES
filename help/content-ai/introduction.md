@@ -6,9 +6,9 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM Content AI, información general, fuente de contenido, búsqueda semántica, adquisición, Cloud Manager
-source-git-commit: 9b3c63be1aa95339086ee5994cd4dd7cdfa7e746
+source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '716'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ La IA del contenido de AEM está estructurada como una pila de cuatro capas: cad
 
 *Lea la pila de abajo hacia arriba, desde el contenido de confianza en la base hasta las experiencias auténticas que enciende en la parte superior.*
 
-1. Fuentes de inteligencia artificial aplicada al contenido
+1. Fuentes de IA aplicada al contenido
 Las fuentes de contenido son entidades administradas en la IA de contenido de AEM que se conectan a un cuerpo de contenido de confianza. Un Source de contenido puede hacer referencia a un tipo de contenido controlado por AEM, como recursos, fragmentos de contenido, páginas, formularios, metadatos y taxonomías, así como fuentes que no sean de AEM, como sitios web de terceros, bases de conocimiento o portales de documentación. Cada Source de contenido se vectoriza automáticamente y se enriquece semánticamente para potenciar la recuperación, la puesta en tierra y las experiencias de IA conversacional. Defina las fuentes de contenido una vez y reutilícelas en las API de inteligencia artificial aplicada al contenido con la actualización y la actualización automáticas integradas.
 
 1. Content AI Foundation Services
@@ -67,7 +67,7 @@ Trabajar en la integración de la inteligencia artificial aplicada al contenido 
 
 ### &#x200B;2. Control de las fuentes de inteligencia artificial aplicada al contenido {#control}
 
-Configure y administre sus fuentes de inteligencia artificial aplicada al contenido para habilitar las experiencias basadas en IA. Consulte [Control de las fuentes de contenido](contentsources.md).
+Configura y administra tus fuentes de inteligencia artificial aplicada al contenido para habilitar las experiencias basadas en IA. Consulta [Controlar tus fuentes de contenido](contentsources.md) para obtener más información.
 
 ## Obtenga información sobre las API de inteligencia artificial aplicada al contenido  {#apis}
 
