@@ -6,9 +6,9 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM Content AI, Fuentes de inteligencia artificial aplicada al contenido, Adquisición, Cloud Manager, Adobe Developer Console
-source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
+source-git-commit: d40fcb4a41c717ef4e6c82d95a36976b1f4de825
 workflow-type: tm+mt
-source-wordcount: '1225'
+source-wordcount: '1276'
 ht-degree: 1%
 
 ---
@@ -96,11 +96,13 @@ Una fuente de contenido define el sitio web que la inteligencia artificial aplic
 
    ![Menú desplegable de frecuencia de actualización que muestra las opciones disponibles](../assets/content-ai-onboarding-step-5-1.png)
 
-1. Seleccione **[!UICONTROL Crear Source]**.
+1. Seleccione **[!UICONTROL Crear Source]**. La adquisición se inicia automáticamente y el origen pasa a **Indexación**.
 
-## Paso 3: Adquisición de Déclencheur {#trigger-acquisition}
+   ![Lista de fuentes de contenido que muestra el origen recién creado en el estado de indexación](../assets/content-ai-onboarding-step-6.png)
 
-Una vez creado el origen, su estado es **Nuevo**. Ejecute una adquisición inicial para iniciar la indexación.
+## Paso 3: Repetición de la adquisición {#trigger-acquisition}
+
+La adquisición se ejecuta automáticamente cuando crea un origen y, a continuación, según la programación establecida por **[!UICONTROL Frecuencia de actualización]**. También puede almacenar en déclencheur una ejecución manual en cualquier momento, por ejemplo, para reindexar inmediatamente después de publicar contenido nuevo.
 
 1. En la lista de origen, seleccione el icono **más acciones** (...) junto a su origen y, a continuación, seleccione **[!UICONTROL adquisición de Déclencheur]**.
 
@@ -116,7 +118,7 @@ Después de iniciarse la adquisición, el estado de origen se actualiza en tiemp
 
 | Estado | Significado |
 | --- | --- |
-| **Nuevo** | Source creado; todavía no se ha ejecutado ninguna adquisición. |
+| **Nuevo** | Source acaba de crear; la adquisición automática aún no ha comenzado. Este estado es breve. |
 | **Indexando** | La adquisición está en curso; el contenido se está rastreando e indexando. |
 | **Disponible** | La indización se ha completado; el origen está listo para servir consultas de búsqueda. |
 
@@ -130,15 +132,17 @@ Espere a que el estado alcance **Disponible** antes de buscar en el índice o pr
 
 Una vez que el estado del origen sea **Disponible**, puede ejecutar consultas de búsqueda directamente desde Cloud Manager para comprobar que el contenido se ha indizado correctamente.
 
-1. En la lista de origen, selecciona **[!UICONTROL Buscar]** junto a tu origen.
+1. En la lista de origen, selecciona el icono **search** (lupa) que hay junto a tu origen.
 
-   ![Lista de fuentes de contenido con el botón Buscar resaltado en una fuente disponible](../assets/content-ai-onboarding-step-13.png)
+   ![Lista de fuentes de contenido con el icono de búsqueda resaltado en una fuente disponible](../assets/content-ai-onboarding-step-13.png)
 
 1. Introduzca una consulta en el campo de búsqueda. Los resultados muestran una lista de elementos coincidentes con una puntuación de coincidencia y un tipo de contenido (por ejemplo, **PAGE** o **PDF**). Al seleccionar un resultado, se abre una vista previa a la derecha.
 
    ![Panel de búsqueda con una consulta, resultados coincidentes con puntuaciones de coincidencia y un panel de vista previa para el resultado superior](../assets/content-ai-onboarding-step-14.png)
 
 ## Modificación o eliminación de un Source {#modify-source}
+
+### Modificación de un origen {#modify}
 
 Para actualizar una configuración de origen una vez creada:
 
@@ -148,15 +152,19 @@ Para actualizar una configuración de origen una vez creada:
 
 1. En el cuadro de diálogo **[!UICONTROL Modificar la inteligencia artificial aplicada al contenido Source]**, actualice la **[!UICONTROL Descripción]**, la **[!UICONTROL dirección del sitio web]**, **[!UICONTROL Excluir direcciones URL]** o la **[!UICONTROL Frecuencia de actualización]** según sea necesario. El **[!UICONTROL Nombre de configuración de inteligencia artificial aplicada al contenido]** es de solo lectura y no se puede cambiar.
 
-1. Seleccione **[!UICONTROL Guardar]** para aplicar los cambios o seleccione **[!UICONTROL Eliminar]** en la parte inferior izquierda del cuadro de diálogo para quitar el origen por completo.
+   ![Modificar el cuadro de diálogo de Source de inteligencia artificial aplicada al contenido con los campos editables resaltados](../assets/content-ai-onboarding-step-12.png)
+
+1. Seleccione **[!UICONTROL Guardar]** para aplicar los cambios. La lista de fuentes se actualiza para reflejar los cambios.
+
+### Eliminar un origen {#delete}
+
+1. En la lista de origen, seleccione el icono **más acciones** (...) junto al origen y, a continuación, seleccione **[!UICONTROL Eliminar]**.
 
    >[!WARNING]
    >
    >La eliminación de un origen es permanente. Todo el contenido indizado para ese origen se elimina y ya no puede servir consultas de búsqueda.
 
-   ![Modificar el cuadro de diálogo de Source de inteligencia artificial aplicada al contenido con los campos editables resaltados y un botón Eliminar en la esquina inferior izquierda](../assets/content-ai-onboarding-step-12.png)
-
-La lista de fuentes se actualiza para reflejar los cambios. Si ha eliminado el origen, ya no aparece en la lista.
+Después de la eliminación, el origen ya no aparece en la lista.
 
 ## Próximos pasos {#next-steps}
 
