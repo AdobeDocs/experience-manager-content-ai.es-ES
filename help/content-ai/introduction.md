@@ -7,9 +7,9 @@ level: Beginner
 solution: Experience Manager
 keywords: Inteligencia artificial aplicada al contenido de AEM, fuente de contenido, búsqueda semántica, adquisición, Cloud Manager
 source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '885'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
@@ -18,8 +18,8 @@ ht-degree: 75%
 
 ## Contenido inteligente, diseñado para estar listo para la IA {#ai-ready}
 
-Los clientes están empezando a conocer marcas a través de IA antes de conocer un sitio web. Asistentes de chat, descripciones generales de IA, agentes, búsqueda conversacional, conserjes de IA: todos recuperan, resumen y representan el contenido de la marca en nombre de la misma. Lo que dicen es tan preciso, actual y en la marca como el contenido al que pueden llegar.
-Ese es el cambio para el que está diseñada la IA del contenido de AEM. Trata el contenido de la marca como la verdad básica en la que se ejecutan las experiencias de IA y proporciona a los clientes de AEM las herramientas para crear esa verdad básica más rápido en el lado del autor y ofrecerla claramente a las experiencias impulsadas por IA del lado del consumidor en el lado de la publicación.
+Los clientes están empezando a conocer marcas a través de la IA antes de conocer un sitio web. Asistentes de chat, informaciones generales sobre la IA, agentes, búsqueda conversacional, AI Concierges: todos ellos recuperan, resumen y representan el contenido de la marca en nombre de la misma. Lo que dicen es tan preciso, actual y coherente con la marca como el contenido al que pueden acceder.
+Ese es el cambio para el que se ha diseñado la inteligencia artificial aplicada al contenido de AEM. Considera que el contenido de la marca es la base sobre la que se ejecutan las experiencias de IA y proporciona a los clientes de AEM las herramientas para crear esa base de forma más rápida en el lado del autor y presentarla de forma clara en las experiencias basadas en la IA orientadas al consumidor en el lado de la publicación.
 
 **Del lado del autor**, la inteligencia artificial aplicada al contenido de AEM basa la creación en fuentes de marcas aprobadas. La creación asistida por IA, el descubrimiento en lenguaje natural del contenido de las páginas existentes, fragmentos y recursos y la generación con reconocimiento de marca permiten a los equipos producir variaciones para nuevos públicos, regiones y canales sin salir de AEM y sin alejarse de lo que ya se ha aprobado.
 
@@ -27,11 +27,11 @@ Ese es el cambio para el que está diseñada la IA del contenido de AEM. Trata e
 
 ### Qué significa para los clientes de AEM {#what-it-means}
 
-El contenido aprobado es la defensa de la marca contra las alucinaciones. Cuando la IA se basa en contenido de AEM controlado, las respuestas siguen siendo precisas, actuales y no dependen de la marca de forma predeterminada.
-La creación sigue el ritmo de la demanda de la era de la IA. Los equipos generan copias e imágenes para más audiencias y momentos dentro de la experiencia de creación, dibujando a partir de fuentes aprobadas en lugar de empezar en blanco.
-El descubrimiento funciona de la manera en que la gente y las máquinas preguntan. La búsqueda en lenguaje natural y basada en intención en recursos, fragmentos, páginas y formularios convierte el contenido existente en un suministro reutilizable.
-Personalization se adapta mediante la reutilización, no la duplicación. Los componentes gobernados se recombinan en variantes en lugar de multiplicarse en copias sin seguimiento.
-Los canales de publicación ahora incluyen superficies de IA. El contenido se entrega en formas que los seres humanos, los agentes y las experiencias mediadas por IA pueden consumir, sin canalizaciones independientes para cada uno.
+El contenido aprobado es la defensa de la marca contra las alucinaciones. Cuando la IA se basa en contenido de AEM controlado, las respuestas siguen siendo precisas, actuales y coherentes con la marca de forma predeterminada.
+La creación sigue el ritmo de la demanda en la era de la IA. Los equipos generan copias e imágenes para más públicos y momentos dentro de la experiencia de creación, recurriendo a fuentes aprobadas en lugar de empezar desde cero.
+El descubrimiento funciona tal y como lo hacen realmente las personas y las máquinas. La búsqueda basada en el lenguaje natural y en la intención, que abarca recursos, fragmentos, páginas y formularios, convierte el contenido existente en un suministro reutilizable.
+La personalización se adapta gracias a la reutilización, y no a la duplicación. Los componentes controlados se recombinan en variantes en lugar de multiplicarse en copias sin seguimiento.
+Los canales de publicación ahora incluyen superficies de IA. El contenido se suministra en formas que pueden consumir tanto las personas como los agentes y las experiencias mediadas por la IA, sin necesidad de canalizaciones independientes para cada uno de ellos.
 
 **El punto más importante: el contenido de la marca de confianza existente es ahora más valioso que nunca. Cada fragmento, recurso y página aprobados que ya residen en AEM se convierten en la base de la que dependen las experiencias impulsadas por IA, y la inteligencia artificial aplicada al contenido de AEM es lo que hace que esa biblioteca sea reutilizable, detectable y esté lista para impulsar lo que viene después.**
 
@@ -67,8 +67,8 @@ Trabajar en la integración de la inteligencia artificial aplicada al contenido 
 
 ### &#x200B;2. Controlar fuentes de la inteligencia artificial aplicada al contenido {#control}
 
-Configura y administra tus fuentes de inteligencia artificial aplicada al contenido para habilitar las experiencias basadas en IA. Consulta [Controlar tus fuentes de contenido](contentsources.md) para obtener más información.
+Configure y administre sus fuentes de inteligencia artificial aplicada al contenido para habilitar las experiencias basadas en IA. Para obtener más información, consulte [Controlar las fuentes de contenido](contentsources.md).
 
 ## Descubrir las API de la inteligencia artificial aplicada al contenido  {#apis}
 
-Descubra la amplia variedad funcional de la inteligencia artificial aplicada al contenido de AEM: las API muestran todo el potencial de la plataforma. Ver [API de IA de contenido](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/).
+Descubra la amplia variedad funcional de la inteligencia artificial aplicada al contenido de AEM: las API muestran todo el potencial de la plataforma. Consulte las [API de inteligencia artificial aplicada al contenido](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/).
