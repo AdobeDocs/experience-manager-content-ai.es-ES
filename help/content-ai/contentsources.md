@@ -7,9 +7,9 @@ level: Beginner
 solution: Experience Manager
 keywords: Inteligencia artificial aplicada al contenido de AEM, Fuentes de la inteligencia artificial aplicada al contenido, Adquisición, Cloud Manager, Adobe Developer Console
 source-git-commit: d40fcb4a41c717ef4e6c82d95a36976b1f4de825
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1276'
-ht-degree: 61%
+ht-degree: 100%
 
 ---
 
@@ -23,42 +23,42 @@ Esta guía le explica paso a paso cómo configurar las fuentes de la inteligenci
 Antes de empezar, asegúrese de que cumple las siguientes condiciones:
 
 * Dispone de un programa de Cloud Manager activo con al menos un entorno de AEM as a Cloud Service.
-* El usuario está asignado al perfil de producto **Usuarios de AEM** para el entorno de destino, lo cual le permite ver las fuentes de contenido.
-* El usuario está asignado al perfil de producto **Administradores de AEM** para el entorno de destino, lo cual le permite crear y editar orígenes de contenido. El acceso a Cloud Manager por sí solo no es suficiente. Consulte [Asignar un usuario a un perfil de producto de AEM](#assign-product-profile) a continuación.
-* El perfil de producto de entorno se ha aprovisionado en **Adobe Admin Console**.
+* A su usuario se le asigna el perfil de producto **Usuarios de AEM** para el entorno de destino, lo cual le permite ver las fuentes de contenido.
+* A su usuario se le asigna el perfil de producto **Administradores de AEM** para el entorno de destino, lo cual le permite crear y editar fuentes de contenido. El acceso a Cloud Manager por sí solo no es suficiente. Consulte la siguiente sección, [Asignar un usuario a un perfil de producto de AEM](#assign-product-profile).
+* El perfil de producto de entorno se ha proporcionado en **Adobe Admin Console**.
 
 ## Asignar un usuario a un perfil de producto de AEM {#assign-product-profile}
 
 Utilice este procedimiento para otorgar acceso a un usuario a [!DNL Adobe Experience Manager] as a Cloud Service para un entorno específico. Asigne el perfil que coincida con el acceso que necesita el usuario:
 
-* **[!UICONTROL Usuarios de AEM]**: vean fuentes de contenido.
-* **[!UICONTROL Administradores de AEM]**: cree y edite orígenes de contenido.
+* **[!UICONTROL Usuarios de AEM]**: ven las fuentes de contenido.
+* **[!UICONTROL Administradores de AEM]**: crean y editan las fuentes de contenido.
 
 >[!NOTE]
 >
 >Los usuarios deben pertenecer a un perfil de producto de AEM como **[!UICONTROL Usuarios de AEM]** o **[!UICONTROL Administradores de AEM]** para acceder a AEM. El acceso a Cloud Manager por sí solo no es suficiente.
 
-Para asignar estos perfiles, debe ser administrador del sistema con el perfil de producto de Cloud Manager [!UICONTROL Propietario del negocio]. Tenga preparados el nombre y la dirección de correo electrónico del usuario.
+Para asignar estos perfiles, debe ser un administrador del sistema con el perfil de producto [!UICONTROL Business Owner] Cloud Manager. Tenga preparados el nombre y la dirección de correo electrónico del usuario.
 
 1. En [Cloud Manager](https://my.cloudmanager.adobe.com/), vaya a su programa y seleccione **[!UICONTROL Administrar acceso]** para el entorno de destino. Se abre una nueva pestaña [!DNL Adobe Admin Console] para ese entorno.
-1. Seleccione el perfil de producto **[!UICONTROL Usuarios de AEM]** o **[!UICONTROL Administradores de AEM]** para el nivel **publicar**; por ejemplo, `AEM Administrators - publish - Program 12345 - Environment 67890`. La inteligencia artificial aplicada al contenido publica contenido, por lo que el perfil debe asignarse al nivel de publicación, no al de autor.
-1. Seleccione **[!UICONTROL Agregar usuario]**.
-1. Introduzca el nombre y la dirección de correo electrónico del usuario y, a continuación, guarde el cambio. El usuario se agrega al perfil del producto.
+1. Seleccione el perfil de producto **[!UICONTROL Usuarios de AEM]** o **[!UICONTROL Administradores de AEM]** para el nivel **publicar**; por ejemplo, `AEM Administrators - publish - Program 12345 - Environment 67890`. La inteligencia artificial aplicada al contenido publica contenido, por lo que el perfil debe asignarse a nivel de publicación, no de autor.
+1. Seleccione **[!UICONTROL Añadir usuario]**.
+1. Introduzca el nombre y la dirección de correo electrónico del usuario y, a continuación, guarde el cambio. El usuario se añade al perfil del producto.
 
-Repita estos pasos para cada entorno donde el usuario necesite acceso, como desarrollo, ensayo o producción.
+Repita estos pasos para cada entorno al que el usuario necesite acceder, como el de desarrollo, ensayo o producción.
 
 >[!CAUTION]
 >
->No edite ni elimine los perfiles de producto predeterminados llamados **[!UICONTROL Administradores de AEM]** o **[!UICONTROL Usuarios de AEM]**. Al cambiar el nombre de **[!UICONTROL Administradores de AEM]** se eliminarán los derechos de administrador de todos los que tengan asignados.
+>No edite ni elimine los perfiles de producto llamados **[!UICONTROL Administradores de AEM]** o **[!UICONTROL Usuarios de AEM]**. Al cambiar el nombre de **[!UICONTROL Administradores de AEM]** se eliminarán los derechos de administrador de todas las personas asignadas a dicho grupo.
 
-### Comprobar la asignación {#verify-assignment}
+### Verificación de la asignación {#verify-assignment}
 
-Para comprobar que la asignación se ha realizado correctamente:
+Para verificar que la asignación se ha realizado correctamente:
 
 1. En [!DNL Admin Console], vuelva a abrir el perfil de producto que asignó.
 1. Confirme que el usuario aparece en la lista de miembros.
 
-Si está solucionando problemas de acceso o de token, confirme que el usuario se agrega directamente al perfil del producto y no solo a través de un grupo.
+Si está solucionando problemas de acceso o de token, confirme que el usuario se añade directamente al perfil del producto y no solo a través de un grupo.
 
 ## Paso 1: abrir la pestaña Configuración de la inteligencia artificial aplicada al contenido {#open-tab}
 
@@ -96,13 +96,13 @@ Una fuente de contenido define el sitio web que la inteligencia artificial aplic
 
    ![Menú desplegable de frecuencia de actualización que muestra las opciones disponibles](../assets/content-ai-onboarding-step-5-1.png)
 
-1. Seleccione **[!UICONTROL Crear fuente]**. La adquisición se inicia automáticamente y el origen pasa a **Indexación**.
+1. Seleccione **[!UICONTROL Crear fuente]**. La adquisición se inicia automáticamente y la fuente pasa a **Indexación**.
 
-   ![Lista de fuentes de contenido que muestra el origen recién creado en el estado de indexación](../assets/content-ai-onboarding-step-6.png)
+   ![Lista de fuentes de contenido en la que se muestra el estado Indexación](../assets/content-ai-onboarding-step-6.png)
 
-## Paso 3: Repetición de la adquisición {#trigger-acquisition}
+## Paso 3: volver a ejecutar la adquisición {#trigger-acquisition}
 
-La adquisición se ejecuta automáticamente cuando crea un origen y, a continuación, según la programación establecida por **[!UICONTROL Frecuencia de actualización]**. También puede almacenar en déclencheur una ejecución manual en cualquier momento, por ejemplo, para reindexar inmediatamente después de publicar contenido nuevo.
+La adquisición se ejecuta automáticamente cuando se crea una fuente y, a continuación, según la programación establecida por **[!UICONTROL Frecuencia de actualización]**. También puede activar una ejecución manualmente en cualquier momento, por ejemplo, para reindexar inmediatamente después de publicar contenido nuevo.
 
 1. En la lista de fuentes, seleccione el icono **más acciones** (...) junto a la fuente y, a continuación, seleccione **[!UICONTROL Activar adquisición]**.
 
@@ -118,7 +118,7 @@ Después de iniciarse la adquisición, el estado de la fuente se actualiza en ti
 
 | Estado | Significado |
 | --- | --- |
-| **Nuevo** | Source acaba de crear; la adquisición automática aún no ha comenzado. Este estado es breve. |
+| **Nuevo** | La fuente se acaba de crear; la adquisición automática aún no ha comenzado. Este estado es breve. |
 | **Indexación** | La adquisición está en curso; el contenido se está rastreando e indexando. |
 | **Disponible** | La indexación se ha completado; la fuente está lista para atender consultas de búsqueda. |
 
@@ -132,7 +132,7 @@ Espere a que el estado esté **Dsponible** antes de buscar en el índice o proba
 
 Una vez que el estado de la fuente esté **Disponible**, puede ejecutar consultas de búsqueda directamente desde Cloud Manager para comprobar que el contenido se ha indexado correctamente.
 
-1. En la lista de origen, selecciona el icono **search** (lupa) que hay junto a tu origen.
+1. En la lista de fuentes, seleccione el icono de **búsqueda** (lupa) junto a su fuente.
 
    ![Lista de fuentes de contenido con el icono de búsqueda resaltado en una fuente disponible](../assets/content-ai-onboarding-step-13.png)
 
@@ -142,7 +142,7 @@ Una vez que el estado de la fuente esté **Disponible**, puede ejecutar consulta
 
 ## Modificar o eliminar una fuente {#modify-source}
 
-### Modificación de un origen {#modify}
+### Modificar una fuente {#modify}
 
 Para actualizar una configuración de la fuente una vez creada:
 
@@ -152,19 +152,19 @@ Para actualizar una configuración de la fuente una vez creada:
 
 1. En el cuadro de diálogo **[!UICONTROL Modificar fuente de la inteligencia artificial aplicada al contenido]**, actualice la **[!UICONTROL Descripción]**, **[!UICONTROL Dirección del sitio web]**, **[!UICONTROL Excluir direcciones URL]** o **[!UICONTROL Frecuencia de actualización]** según sea necesario. El **[!UICONTROL Nombre de configuración de la inteligencia artificial aplicada al contenido]** es de solo lectura y no se puede cambiar.
 
-   ![Modificar el cuadro de diálogo de Source de inteligencia artificial aplicada al contenido con los campos editables resaltados](../assets/content-ai-onboarding-step-12.png)
+   ![Cuadro de diálogo Modificar fuente de la inteligencia artificial aplicada al contenido con los campos editables resaltados](../assets/content-ai-onboarding-step-12.png)
 
 1. Seleccione **[!UICONTROL Guardar]** para aplicar los cambios. La lista de fuentes se actualiza para reflejar los cambios.
 
-### Eliminar un origen {#delete}
+### Eliminar una fuente {#delete}
 
-1. En la lista de origen, seleccione el icono **más acciones** (...) junto al origen y, a continuación, seleccione **[!UICONTROL Eliminar]**.
+1. En la lista de fuentes, seleccione el icono de **más acciones** (...) situado junto a la fuente y, a continuación, seleccione **[!UICONTROL Eliminar]**.
 
    >[!WARNING]
    >
    >La eliminación de una fuente es permanente. Todo el contenido indexado para esa fuente se elimina y ya no puede atender consultas de búsqueda.
 
-Después de la eliminación, el origen ya no aparece en la lista.
+Después de la eliminación, la fuente ya no aparecerá en la lista.
 
 ## Próximos pasos {#next-steps}
 

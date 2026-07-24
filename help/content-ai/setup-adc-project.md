@@ -7,9 +7,9 @@ level: Beginner
 solution: Experience Manager
 keywords: Inteligencia artificial aplicada al contenido de AEM, Adobe Developer Console, autenticación, Sservidor a servidor, Clave de API, token de acceso
 source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '714'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
