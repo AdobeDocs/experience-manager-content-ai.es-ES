@@ -6,35 +6,33 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: Inteligencia artificial aplicada al contenido de AEM, Búsqueda por inteligencia artificial aplicada al contenido de AEM, GenSearch, Búsqueda rápida, Fuentes de inteligencia artificial aplicada al contenido, Adquisición, Cloud Manager
-source-git-commit: 51fa66b5ac0ef77e438db76530788826da65f91e
-workflow-type: ht
-source-wordcount: '1487'
-ht-degree: 100%
-
+source-git-commit: d8bd542a6a2d7e467b0d50e022f1e019d6f5b5ff
+workflow-type: tm+mt
+source-wordcount: '1458'
+ht-degree: 77%
 ---
-
 
 # Introducción a la búsqueda por inteligencia artificial aplicada al contenido de AEM
 
-La búsqueda tradicional del sitio hace coincidir las palabras que escribe un visitante con las palabras del contenido. Funciona bien cuando los visitantes utilizan la misma terminología que el contenido, pero falla en el momento en que hacen una pregunta, expresan una intención o simplemente formulan las cosas de forma diferente. La búsqueda es una de las señales más claras de la intención del visitante en un sitio, por lo que una coincidencia infructuosa a menudo implica un recorrido fallido: el contenido no se descubre, la participación cae y las conversiones se pierden. Los visitantes esperan cada vez más que la búsqueda entienda lo que quieren decir, no solo lo que escriben, y esa misma base que toma en cuenta la intención es lo que hace posible, en primer lugar, las respuestas generativas.
+La búsqueda tradicional del sitio hace coincidir las palabras que escribe un visitante con las palabras del contenido. Esto funciona bien cuando los visitantes utilizan la misma terminología que el contenido. Falla cuando hacen una pregunta, expresan una intención o expresan las cosas de forma diferente. La búsqueda es una de las señales más claras de la intención del visitante en un sitio, por lo que una coincidencia infructuosa a menudo implica un recorrido fallido: el contenido no se descubre, la participación cae y las conversiones se pierden. Los visitantes esperan cada vez más que la búsqueda comprenda qué significan, no solo lo que escriben. La misma base consciente de la intención también hace posibles las respuestas generativas.
 
 La búsqueda por inteligencia artificial aplicada al contenido de AEM no reemplaza la experiencia de búsqueda del sitio, sino que la mejora: pasa de la simple coincidencia de palabras clave a comprender el significado y la intención, y a responder preguntas directamente. La búsqueda semántica incorpora una función de recuperación basada en la intención a la experiencia de búsqueda actual, mostrando contenido relevante incluso cuando la consulta no coincide exactamente con el texto del contenido. La búsqueda generativa aprovecha la misma base de recuperación para producir respuestas contextuales generadas basadas en el contenido propio del sitio; se trata de un paso distinto, no es lo mismo que la recuperación semántica.
 
-Para los visitantes, esto implica mayor relevancia, compatibilidad con lenguajes naturales, menos búsquedas de resultados cero y respuestas más rápidas. Para su empresa, supone mejor coincidencia de intenciones, una detección de contenido más sólida y una base de búsqueda compatible con IA, sin tener que reconstruir su experiencia de búsqueda desde cero. Para su equipo, se trata de una actualización incremental: el componente de búsqueda existente puede pasar de lo léxico a lo semántico y a las capacidades generativas paso a paso, en lugar de requerir una implementación completamente nueva.
+Para los visitantes, esto implica mayor relevancia, compatibilidad con lenguajes naturales, menos búsquedas de resultados cero y respuestas más rápidas. Para su empresa, supone mejor coincidencia de intenciones, una detección de contenido más sólida y una base de búsqueda compatible con IA, sin tener que reconstruir su experiencia de búsqueda desde cero. Para su equipo, se trata de una actualización incremental: el componente de búsqueda existente puede pasar de lo léxico, a lo semántico, a las capacidades generativas paso a paso, en lugar de requerir una nueva implementación.
 
-La llegada a dicho punto se reduce a dos decisiones: cómo se introduce el contenido en la inteligencia artificial aplicada al contenido y qué componente lo lleva a los visitantes. Conecte el contenido y, a continuación, agregue un componente de búsqueda a una página; el sitio estará listo para ofrecer a los visitantes los resultados y las respuestas por intención más relevantes.
+Para llegar allí, debe tomar dos decisiones: cómo se introduce el contenido en la inteligencia artificial aplicada al contenido y qué componente lo lleva a los visitantes. Para proporcionar a los visitantes resultados relevantes y respuestas basadas en la intención, conecte el contenido y, a continuación, añada un componente de búsqueda a una página.
 
 ## Requisitos previos {#prerequisites}
 
 Antes de empezar, asegúrese de que cumple las siguientes condiciones:
 
 * Dispone de un programa de Cloud Manager activo con al menos un entorno de AEM as a Cloud Service.
-* El usuario está asignado al perfil de producto **[!UICONTROL Usuarios de AEM]** (para ver fuentes de contenido) o a **[!UICONTROL Administradores de AEM]** (para crearlos y editarlos), asignados al nivel **publicar**: la inteligencia artificial aplicada al contenido indexa contenido publicado, no contenido creado. Consulte [Asignar un usuario a un perfil de producto de AEM](contentsources.md#assign-product-profile) para ver todo el proceso.
+* El usuario se ha asignado al perfil de producto **[!UICONTROL Usuarios de AEM]** (para ver fuentes de contenido) o a **[!UICONTROL Administradores de AEM]** (para crearlos y editarlos) en los niveles **author** y **publish**. Consulte [Asignar un usuario a un perfil de producto de AEM](contentsources.md#assign-product-profile) para ver todo el proceso.
 * El perfil de producto del entorno se ha proporcionado en **Adobe Admin Console**.
 
 >[!NOTE]
 >
->El acceso a Cloud Manager por sí solo no es suficiente. Un usuario también necesita un perfil de producto de AEM asignado en el nivel de publicación para ver o administrar fuentes de contenido.
+>El acceso a Cloud Manager por sí solo no es suficiente. Un usuario también necesita un perfil de producto de AEM asignado a los niveles de creación y publicación para ver o administrar las fuentes de contenido.
 
 ## Paso 1a: Conexión de un índice existente {#option-a}
 
@@ -42,9 +40,9 @@ Los índices de repositorio existentes aparecen de forma automática en la lista
 
 1. Inicie sesión en [Cloud Manager](https://my.cloudmanager.adobe.com/), seleccione su programa y abra la pestaña **[!UICONTROL Configuración de inteligencia artificial aplicada al contenido]** para el entorno que desea configurar.
 1. Busque la fuente con la que desea buscar (por ejemplo, **Páginas**) y seleccione su icono de candado. Solo los usuarios con el perfil de producto **[!UICONTROL Administradores de AEM]** pueden hacer esto: los **[!UICONTROL Usuarios de AEM]** pueden ver fuentes de contenido, no cambiar su capacidad de búsqueda.
-1. ¿Desea leer **Hacer que la fuente se pueda buscar?** dialogar con cuidado. Advierte que las listas de control de acceso (ACL) de Apache Oak no se aplicarán a este índice una vez que se pueda buscar: cualquier usuario autenticado podrá recuperar todo su contenido. Marque **Entiendo que no se aplican los controles de acceso (ACL) y que se podrá buscar en todo el contenido de esta fuente**. A continuación, seleccione **Permitir la búsqueda**.
+1. ¿Desea leer **Hacer que la fuente se pueda buscar?** dialogar con cuidado. Advierte que las listas de control de acceso (ACL) de Apache Oak no se aplican a este índice una vez que se puede buscar. Cualquier usuario autenticado puede recuperar todo su contenido. Marque **Entiendo que no se aplican los controles de acceso (ACL) y que se podrá buscar en todo el contenido de esta fuente**. A continuación, seleccione **Permitir la búsqueda**.
 1. Confirme los cambios de estado en **Disponible**. Un icono de advertencia permanece junto a la fuente como recordatorio permanente de que las ACL se omiten en su caso.
-1. Ejecute una búsqueda de prueba para comprobar que los resultados sean correctos.
+1. Para comprobar los resultados, ejecute una búsqueda de prueba.
 
 >[!WARNING]
 >
@@ -52,7 +50,7 @@ Los índices de repositorio existentes aparecen de forma automática en la lista
 
 >[!NOTE]
 >
->Esta ruta es adecuada si ya tiene un índice con el contenido del sitio, como por ejemplo, el contenido de la página. Utilice dicho índice en lugar de configurar un mecanismo de rastreo independiente.
+>Utilice esta ruta si ya tiene un índice con el contenido del sitio, como el contenido de la página. Utilice dicho índice en lugar de configurar un mecanismo de rastreo independiente.
 
 ## Paso 1b: Rastrear un sitio web {#option-b}
 
@@ -77,11 +75,11 @@ Utilice esta ruta si aún no tiene un índice de búsqueda para el sitio. El pro
    | **Indexación** | Rastreo e indexación en curso. |
    | **Disponible** | Indexación completa: lista para servir consultas de búsqueda. |
 
-1. Seleccione el icono de **búsqueda** situado junto a la fuente y ejecute una consulta de prueba para confirmar que el contenido se ha indexado de forma correcta.
+1. Para confirmar que el contenido se indexó correctamente, seleccione el icono **buscar** junto al origen y ejecute una consulta de prueba.
 
 >[!CAUTION]
 >
->¿Hay una fuente atascada en la **[!UICONTROL Indexación]**? Vuelva a intentar la adquisición desde el menú (...). Si sigue sin avanzar, confirme que la dirección del sitio web sea accesible de forma pública y que los patrones de **[!UICONTROL Excluir URL]** no filtren todas las páginas.
+>Si un origen permanece en **[!UICONTROL Indexando]**, intente primero la adquisición desde el menú (...). Si sigue sin avanzar, confirme que la dirección del sitio web sea accesible de forma pública y que los patrones de **[!UICONTROL Excluir URL]** no filtren todas las páginas.
 
 ## Paso 2: Selección de un componente de búsqueda {#choose-component}
 
@@ -99,15 +97,15 @@ Existen dos componentes que pueden colocar la búsqueda en una página, creados 
 Si el sitio ya usa el clásico componente de búsqueda rápida [!DNL AEM], la versión 3 agrega una opción de inclusión de **Búsqueda por IA** que los visitantes pueden activar; no se requiere ningún componente nuevo, proxy o fuente de contenido.
 
 * La búsqueda sigue ejecutándose a través de la misma ruta JCR/QueryBuilder que hoy: nada cambia en el servlet de resultados ni en cómo se representan los resultados.
-* Cuando un visitante habilita la opción, el componente prefija la consulta con un marcador especial que la enruta a la coincidencia semántica en lugar de a texto completo de palabra clave sin formato.
-* No hay un resumen de respuestas generativas en esta ruta. Mejora la calidad de la coincidencia de la lista de resultados existente; no agrega una respuesta de IA generativa.
+* Cuando un visitante habilita la opción, el componente prefija la consulta con un marcador especial que la enruta a la coincidencia semántica en lugar de a la búsqueda de texto completo de palabra clave sin formato.
+* Esta ruta no tiene un resumen de respuestas generativo. Mejora la calidad de la coincidencia de la lista de resultados existente; no agrega una respuesta de IA generativa.
 * **El paso 1 (Incorporación de inteligencia artificial aplicada al contenido) no se aplica a esta ruta.** No hay ninguna fuente de contenido para crear o conectar: este componente consulta directamente el índice de página existente.
 
 >[!NOTE]
 >
 >Si la búsqueda semántica no funciona como se espera después de habilitar la opción, genere un ticket de asistencia.
 
-Esta ruta es adecuada si desea una actualización de búsqueda semántica incremental sin adoptar un nuevo componente o fuentes de contenido. No es la ruta correcta si desea una experiencia de respuesta generativa; para ello, utilice la Búsqueda por inteligencia artificial aplicada al contenido de AEM.
+Utilice esta ruta si desea una actualización semántica de la búsqueda incremental sin adoptar un nuevo componente o fuentes de contenido. No es la ruta correcta si desea una experiencia de respuesta generativa; utilice la Búsqueda por IA de contenido de AEM para ello.
 
 ## Búsqueda de inteligencia artificial aplicada al contenido de AEM {#gensearch}
 
@@ -127,13 +125,13 @@ La Búsqueda por inteligencia artificial aplicada al contenido de AEM es un comp
 
 Para obtener la guía de configuración completa (poner el componente a disposición de los autores, conectar su biblioteca de cliente y configurar el cuadro de diálogo), consulte la [Documentación de componentes principales](https://www.adobe.com/go/aem_cmp_library_es).
 
-## ¡Felicitaciones! {#congratulations}
+## Enhorabuena. {#congratulations}
 
 Ha configurado correctamente sus capacidades de búsqueda semántica y generativa.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3497306)
 
-## Siguientes pasos {#next-steps}
+## Próximos pasos {#next-steps}
 
 * [Configuración de un proyecto de Adobe Developer Console](setup-adc-project.md): cree el proyecto de ADC y las credenciales necesarias para llamar a la API de inteligencia artificial aplicada al contenido de forma directa.
 * [Referencia de API de la inteligencia artificial aplicada al contenido](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/): realice consultas del contenido indexado mediante puntos finales de búsqueda semántica, de texto completo o híbrida.
