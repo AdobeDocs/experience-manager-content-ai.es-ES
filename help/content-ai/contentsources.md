@@ -63,10 +63,10 @@ Para crear programas durante la incorporación inicial, el administrador del sis
 
 Para obtener más información, consulte lo siguiente:
 
-* [Asignar integrantes del equipo a perfiles de producto de Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
+* [Asignar integrantes del equipo a perfiles de producto de Cloud Manager](https://experienceleague.adobe.com/es/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
 * [Acceder a Cloud Manager](https://experienceleague.adobe.com/es/docs/experience-manager-cloud-service/content/onboarding/journey/cloud-manager)
-* [Perfiles de equipo y producto de AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
-* [Agregar usuarios y funciones](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/users-and-roles)
+* [Perfiles de equipo y producto de AEM as a Cloud Service](https://experienceleague.adobe.com/es/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
+* [Agregar usuarios y funciones](https://experienceleague.adobe.com/es/docs/experience-manager-cloud-manager/content/requirements/users-and-roles)
 
 ## Asignar un usuario a un perfil de producto de AEM {#assign-product-profile}
 
