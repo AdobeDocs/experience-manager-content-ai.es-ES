@@ -20,7 +20,7 @@ level_v2:
 source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
 workflow-type: tm+mt
 source-wordcount: '1671'
-ht-degree: 76%
+ht-degree: 100%
 ---
 
 # Configuración y administración de fuentes de la inteligencia artificial aplicada al contenido
@@ -32,41 +32,41 @@ Esta guía le explica paso a paso cómo configurar las fuentes de la inteligenci
 Antes de empezar, asegúrese de que cumple las siguientes condiciones:
 
 * Dispone de un programa de Cloud Manager activo con al menos un entorno de AEM as a Cloud Service.
-* Tiene un perfil de producto de Cloud Manager y puede iniciar sesión en Cloud Manager; consulte [Obtener acceso a Cloud Manager](#cloud-manager-access) a continuación.
+* Tiene un perfil de producto de Cloud Manager y puede iniciar sesión en Cloud Manager: consulte [Obtener acceso a Cloud Manager](#cloud-manager-access) a continuación.
 * A su usuario se le asigna el perfil de producto **Usuarios de AEM** para el entorno de destino, lo cual le permite ver las fuentes de contenido.
 * A su usuario se le asigna el perfil de producto **Administradores de AEM** para el entorno de destino, lo cual le permite crear y editar fuentes de contenido. El acceso a Cloud Manager por sí solo no es suficiente. Consulte la siguiente sección, [Asignar un usuario a un perfil de producto de AEM](#assign-product-profile).
 * El perfil de producto de entorno se ha proporcionado en **Adobe Admin Console**.
 
 ## Obtener acceso a Cloud Manager {#cloud-manager-access}
 
-Para abrir la ficha **[!UICONTROL Configuración de la inteligencia artificial aplicada al contenido]**, necesita tener acceso a la interfaz de usuario de Cloud Manager. El administrador de [!DNL Adobe Admin Console] de su organización (administrador del sistema o administrador de productos) concede este acceso.
+Para abrir la pestaña **[!UICONTROL Configuración de la inteligencia artificial aplicada al contenido]**, necesita tener acceso a la interfaz de usuario de Cloud Manager. El administrador de [!DNL Adobe Admin Console] de su organización (administrador del sistema o administrador de productos) concede este acceso.
 
 1. Póngase en contacto con su administrador de [[!DNL Adobe Admin Console]](https://adminconsole.adobe.com/). Si todavía no es miembro de la organización, pídale al administrador que añada su dirección de Adobe ID o de correo electrónico.
 1. Solicite al administrador que le asigne un perfil de producto de Cloud Manager para el programa AEM as a Cloud Service de la organización:
 
-   | Perfil del producto | Lo que permite |
+   | Perfil de producto | Lo que permite |
    | --- | --- |
-   | **[!UICONTROL Propietario del negocio]** | Gestiona programas. Tiene amplios permisos de Cloud Manager, como **[!UICONTROL Administrar acceso]**. |
+   | **[!UICONTROL Propietario del negocio]** | Administra programas. Tiene amplios permisos de Cloud Manager, como **[!UICONTROL Administrar acceso]**. |
    | **[!UICONTROL Administrador de implementación]** | Administra entornos, implementaciones y canalizaciones. |
    | **[!UICONTROL Administrador de programa]** | Gestiona la configuración del equipo y la supervisión del programa. |
    | **[!UICONTROL Desarrollador]** | Funciona con código y Git. Tiene permisos limitados de Cloud Manager. |
 
-1. Para abrir Cloud Manager, inicia sesión en [Cloud Manager](https://my.cloudmanager.adobe.com/) o ve a [[!DNL Adobe Experience Cloud]](https://experience.adobe.com/) > **[!DNL Experience Manager]** > **[!UICONTROL Cloud Manager]**. Si su Adobe ID pertenece a más de una organización, seleccione la correcta.
+1. Para abrir Cloud Manager, inicie sesión en [Cloud Manager](https://my.cloudmanager.adobe.com/) o vaya a [[!DNL Adobe Experience Cloud]](https://experience.adobe.com/) > **[!DNL Experience Manager]** > **[!UICONTROL Cloud Manager]**. Si su Adobe ID pertenece a más de una organización, seleccione la correcta.
 
 >[!NOTE]
 >
->Un perfil de producto de Cloud Manager no proporciona acceso a las fuentes de contenido. También necesita el perfil de producto de **[!UICONTROL Usuarios de AEM]** o **[!UICONTROL Administradores de AEM]** para el entorno. Consulte [Asignar un usuario a un perfil de producto de AEM](#assign-product-profile). Un usuario con solo la función de usuario predeterminada de Cloud Manager puede abrir un entorno, pero no obtiene acceso de nivel de programa.
+>Un perfil de producto de Cloud Manager no proporciona acceso a las fuentes de contenido. También necesita el perfil de producto de **[!UICONTROL Usuarios de AEM]** o **[!UICONTROL Administradores de AEM]** para el entorno: consulte [Asignar un usuario a un perfil de producto de AEM](#assign-product-profile). Un usuario con solo la función de usuario predeterminada de Cloud Manager puede abrir un entorno, pero no obtiene acceso de nivel de programa.
 
-Si inicia sesión pero no puede ver el programa o la ficha **[!UICONTROL Configuración de inteligencia artificial aplicada al contenido]**, pídale al administrador que compruebe los perfiles de producto asignados. Confirme también que ha seleccionado la organización correcta al iniciar sesión. AEM Managed Services usa un contexto y una configuración de producto [!DNL Admin Console] diferentes a los de AEM as a Cloud Service.
+Si inicia sesión pero no puede ver el programa o la pestaña **[!UICONTROL Configuración de inteligencia artificial aplicada al contenido]**, pídale al administrador que compruebe los perfiles de producto asignados. Confirme también que ha seleccionado la organización correcta al iniciar sesión. AEM Managed Services usa un contexto y una configuración de producto [!DNL Admin Console] diferentes a los de AEM as a Cloud Service.
 
 Para crear programas durante la incorporación inicial, el administrador del sistema debe tener el perfil **[!UICONTROL Propietario empresarial]** e iniciar sesión en Cloud Manager.
 
 Para obtener más información, consulte lo siguiente:
 
-* [Asignar integrantes del equipo a perfiles de producto de Cloud Manager](https://experienceleague.adobe.com/es/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
+* [Puede asignar miembros del equipo a perfiles de producto de Cloud Manager](https://experienceleague.adobe.com/es/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
 * [Acceder a Cloud Manager](https://experienceleague.adobe.com/es/docs/experience-manager-cloud-service/content/onboarding/journey/cloud-manager)
-* [Perfiles de equipo y producto de AEM as a Cloud Service](https://experienceleague.adobe.com/es/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
-* [Agregar usuarios y funciones](https://experienceleague.adobe.com/es/docs/experience-manager-cloud-manager/content/requirements/users-and-roles)
+* [El equipo de AEM as a Cloud Service y los perfiles de producto](https://experienceleague.adobe.com/es/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
+* [Añadir usuarios y funciones](https://experienceleague.adobe.com/es/docs/experience-manager-cloud-manager/content/requirements/users-and-roles)
 
 ## Asignar un usuario a un perfil de producto de AEM {#assign-product-profile}
 
@@ -82,7 +82,7 @@ Utilice este procedimiento para otorgar acceso a un usuario a [!DNL Adobe Experi
 Para asignar estos perfiles, debe ser un administrador del sistema con el perfil de producto [!UICONTROL Business Owner] Cloud Manager. Tenga preparados el nombre y la dirección de correo electrónico del usuario.
 
 1. En [Cloud Manager](https://my.cloudmanager.adobe.com/), vaya a su programa y seleccione **[!UICONTROL Administrar acceso]** para el entorno de destino. Se abre una nueva pestaña [!DNL Adobe Admin Console] para ese entorno.
-1. Seleccione el perfil de producto **[!UICONTROL Usuarios de AEM]** o **[!UICONTROL Administradores de AEM]** para los niveles **author** y **publish**; por ejemplo, `AEM Administrators - author - Program 12345 - Environment 67890` y `AEM Administrators - publish - Program 12345 - Environment 67890`.
+1. Seleccione el perfil de producto **[!UICONTROL Usuarios de AEM]** o **[!UICONTROL Administradores de AEM]** para el nivel tanto de **autor** como de **publicación**. Por ejemplo, `AEM Administrators - author - Program 12345 - Environment 67890` y `AEM Administrators - publish - Program 12345 - Environment 67890`.
    * **[!UICONTROL Usuarios de AEM]**: operaciones de solo lectura.
    * **[!UICONTROL Administradores de AEM]**: operaciones de escritura, como crear, editar o quitar un origen de contenido y activar la adquisición.
 1. Seleccione **[!UICONTROL Añadir usuario]**.
