@@ -17,10 +17,10 @@ role_v2:
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
     internal-label: Beginner
-source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
-workflow-type: ht
+source-git-commit: fb7ec4db1f4d90acc88b594de4c3e4ca720be2df
+workflow-type: tm+mt
 source-wordcount: '885'
-ht-degree: 100%
+ht-degree: 98%
 ---
 
 # Inteligencia artificial aplicada al contenido: introducción
@@ -80,4 +80,4 @@ Configure y administre sus fuentes de inteligencia artificial aplicada al conten
 
 ## Descubrir las API de la inteligencia artificial aplicada al contenido  {#apis}
 
-Descubra la amplia variedad funcional de la inteligencia artificial aplicada al contenido de AEM: las API muestran todo el potencial de la plataforma. Consulte las [API de inteligencia artificial aplicada al contenido](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/).
+Descubra la amplia variedad funcional de la inteligencia artificial aplicada al contenido de AEM: las API muestran todo el potencial de la plataforma. Consulte las [API de inteligencia artificial aplicada al contenido](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentai/).
