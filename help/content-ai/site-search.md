@@ -17,10 +17,10 @@ role_v2:
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
     internal-label: Beginner
-source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
-workflow-type: ht
+source-git-commit: fb7ec4db1f4d90acc88b594de4c3e4ca720be2df
+workflow-type: tm+mt
 source-wordcount: '1458'
-ht-degree: 100%
+ht-degree: 99%
 ---
 
 # Introducción a la búsqueda por inteligencia artificial aplicada al contenido de AEM
@@ -145,5 +145,5 @@ Ha configurado correctamente sus capacidades de búsqueda semántica y generativ
 ## Próximos pasos {#next-steps}
 
 * [Configuración de un proyecto de Adobe Developer Console](setup-adc-project.md): cree el proyecto de ADC y las credenciales necesarias para llamar a la API de inteligencia artificial aplicada al contenido de forma directa.
-* [Referencia de API de la inteligencia artificial aplicada al contenido](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/): realice consultas del contenido indexado mediante puntos finales de búsqueda semántica, de texto completo o híbrida.
+* [Referencia de API de la inteligencia artificial aplicada al contenido](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentai/): realice consultas del contenido indexado mediante puntos finales de búsqueda semántica, de texto completo o híbrida.
 * [Documentación de componentes principales](https://www.adobe.com/go/aem_cmp_library_es): más información sobre componentes proxy y directivas de plantilla.

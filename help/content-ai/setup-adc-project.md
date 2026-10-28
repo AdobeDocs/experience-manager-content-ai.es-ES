@@ -17,10 +17,10 @@ role_v2:
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
     internal-label: Beginner
-source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
-workflow-type: ht
+source-git-commit: fb7ec4db1f4d90acc88b594de4c3e4ca720be2df
+workflow-type: tm+mt
 source-wordcount: '714'
-ht-degree: 100%
+ht-degree: 98%
 ---
 
 # Configuración de un proyecto de Adobe Developer Console {#configure-adc-project}
@@ -126,4 +126,4 @@ Los servicios de inteligencia artificial aplicada al contenido de AEM admiten do
 ## Próximos pasos {#next-steps}
 
 * [Controlar las fuentes de contenido](contentsources.md): configure una fuente de contenido en Cloud Manager y active la adquisición.
-* [Referencia de API de inteligencia artificial aplicada al contenido](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/): utilice su token de acceso o clave de API para consultar el contenido indexado.
+* [Referencia de API de inteligencia artificial aplicada al contenido](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentai/): utilice su token de acceso o clave de API para consultar el contenido indexado.
